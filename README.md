@@ -1,5 +1,5 @@
-## Atlassian Code Challenge
-This is a coding challenge from Atlassian.
+## Code Challenge
+This is a coding challenge from a company.
 
 ## Available Scripts
 
