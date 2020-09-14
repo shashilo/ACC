@@ -1,0 +1,51 @@
+[
+	{
+		"title": "Capacity Planning",
+		"description": "Create a capacity plan for your team, with your team.",
+		"link": "https://example.com/capacity-planning",
+		"category": "leadership",
+		"image": "https://www.atlassian.com/dam/jcr:fa55c05f-c087-4d8f-9f9b-4615216ca4db/newplay.png"
+	},
+	{
+		"title": "5 Whys Analysis",
+		"description": "Uncover the root of a problem and explore possible solutions.",
+		"link": "https://example.com/5-whys",
+		"category": "project",
+		"image": "https://www.atlassian.com/dam/jcr:8b081c1f-6a30-46a8-8683-b149a5fa0e2b/5whys.png"
+	},
+	{
+		"title": "Change Management Kick-off",
+		"description": "Align your team and create a plan of action.",
+		"link": "https://example.com/change-management",
+		"category": "project",
+		"image": "https://www.atlassian.com/dam/jcr:c9760c7e-831a-4438-ad5c-8618cc9051df/customer-journey-mapping.png"
+	},
+	{
+		"title": "Demo Trust",
+		"description": "Get feedback from your leadership team when it matters most.",
+		"link": "https://example.com/demo-trust",
+		"category": "leadership",
+		"image": "https://www.atlassian.com/dam/jcr:8062a8eb-1e5e-41e0-8f22-72a6b79f3006/demotrust.png"
+	},
+	{
+		"title": "Empathy Mapping",
+		"description": "Align your success criteria with the needs of customer personas.",
+		"link": "https://example.com/empathy-mapping",
+		"category": "customer",
+		"image": "https://www.atlassian.com/dam/jcr:e3272b7f-f0b3-4c63-8324-d35ed7736918/empathymapping.png"
+	},
+	{
+		"title": "End-to-end Demo",
+		"description": "Visualize your project and get feedback at every stage.",
+		"link": "https://example.com/e2e-demo",
+		"category": "project",
+		"image": "https://www.atlassian.com/dam/jcr:6de0a6ac-b7d7-427d-8c00-00038c176276/endtoend.png"
+	},
+	{
+		"title": "Incident Response Communications",
+		"description": "Don't just fix the problem – keep customers updated, too.",
+		"link": "https://example.com/incident-response",
+		"category": "customer",
+		"image": "https://www.atlassian.com/dam/jcr:8e913621-97b2-420d-8470-53491045d1bd/Incident%20communication%20reviews.svg"
+	}
+]
