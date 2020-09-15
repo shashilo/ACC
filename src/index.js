@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import './shared/styles/main.scss';
 import { Routes } from './routes';
-import { Header } from './Components/Layout/Header';
+import { Header } from './Components/Layout/Header/Header';
 import { Footer } from './Components/Layout/Footer';
 import { BrowserRouter } from 'react-router-dom';
 
