@@ -3,6 +3,7 @@ import './Home.scss';
 import challengeData from '../../data/coding_challenge_data.json';
 import Select from '@atlaskit/select';
 import { Link } from 'react-router-dom';
+import { Results } from '../Results/Results';
 
 const Home = () => {
   let [ categories, setCategories ] = useState([]);
@@ -30,7 +31,7 @@ const Home = () => {
     <div className="home page">
 
       <div className="hero">
-        <div className="heading-image --analysis"></div>
+        <img src="https://www.atlassian.com/dam/jcr:8b081c1f-6a30-46a8-8683-b149a5fa0e2b/5whys.png" alt="" />
         <div className="content">
           <h1>Team Collaboration</h1>
           <p>Find ways to build teams, engage growth and deliver successful solutions with our tool kit below. Know when and how to take your team to the max with these tips and strategies.</p>
@@ -51,6 +52,10 @@ const Home = () => {
             options= { categories }
             placeholder="Any"
           />
+        </div>
+
+        <div className="results-content">
+          <Results results={ challengeData } />
         </div>
 
       </div>

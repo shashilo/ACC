@@ -2,7 +2,7 @@
     .hero {
         display: grid;
         grid-gap: 5rem;
-        grid-template-columns: auto 1fr;
+        grid-template-columns: 14rem 1fr;
         font-size: 2rem;
         letter-spacing: .03rem;
         line-height: 2.8rem;
@@ -17,6 +17,11 @@
             grid-column: span 2;
             margin: auto;
             width: 14rem;
+        }
+
+        img {
+            margin: auto;
+            width: 100%;
         }
     }
 }
@@ -64,9 +69,23 @@
 .results-content {
     display: grid;
     grid-column-gap: 7.5rem;
+    grid-row-gap: 6rem;
     grid-template-columns: repeat(3, 1fr);
+    margin: 5rem 0;
 
     &__item {
-        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15)
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
+        padding: 2rem;
+
+        &:nth-child(3n+2) {
+            position: relative;
+            top: -.8rem;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+            width: 50%;
+        }
     }
 }
