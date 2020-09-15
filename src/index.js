@@ -5,13 +5,16 @@ import './shared/styles/main.scss';
 import { Routes } from './routes';
 import { Header } from './Components/Layout/Header';
 import { Footer } from './Components/Layout/Footer';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
     <div className="container">
-      <Header />
-      <Routes />
-      <Footer />
+      <BrowserRouter>
+        <Header />
+        <Routes />
+        <Footer />
+      </BrowserRouter>
     </div>
   </React.StrictMode>,
   document.getElementById('root')

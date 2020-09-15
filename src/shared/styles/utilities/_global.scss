@@ -1,7 +1,13 @@
+// Globally available utility classes
+
 .-flexbox {
     display: flex;
 }
 
-.-height100 {
-    height: 100%;
+.-uppercase {
+    text-transform: uppercase;
+}
+
+.-mb-30 {
+    margin-bottom: 3rem;
 }

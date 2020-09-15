@@ -4,22 +4,18 @@ import {
     Switch,
     Route,
     Redirect,
-    BrowserRouter,
 } from 'react-router-dom';
 
 import Home from './Components/Pages/Home';
 
 export const Routes = () => {
     return (
-        <BrowserRouter>
-            <Switch>
-                <Route exact path="/">
-                    <Home />
-                </Route>
+        <Switch>
+            <Route exact path="/">
+                <Home />
+            </Route>
 
-                <Route render={() => <Redirect to="/"/>}/>
-
-            </Switch>
-        </BrowserRouter>
+            <Route render={() => <Redirect to="/"/>}/>
+        </Switch>
     )
 }

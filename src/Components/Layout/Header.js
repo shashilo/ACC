@@ -1,12 +1,14 @@
 import React from 'react'
-import Logo from '../../shared/images/atlassian_logo.svg';
+
+import { AtlassianLogo } from '@atlaskit/logo';
 import './Header.scss';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
     return (
         <header className="-flexbox between-xs middle-xs">
-            <img src={ Logo } alt="Atlassian Logo" />
-            <a href="#">Login</a>
+            <AtlassianLogo size="medium" textColor="#0052CC" iconColor="#0052CC" />
+            <Link to="/">Login</Link>
         </header>
     )
 }
