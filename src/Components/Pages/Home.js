@@ -2,19 +2,19 @@ import React, { useState, useEffect } from 'react';
 import './Home.scss';
 import challengeData from '../../data/coding_challenge_data.json';
 import Select from '@atlaskit/select';
-import { Link } from 'react-router-dom';
 import { Results } from '../Results/Results';
 
 const Home = () => {
-  let [ categories, setCategories ] = useState([]);
+  const [ categories, setCategories ] = useState([]);
+  const [ resultsData, setResultsData ] = useState(challengeData);
 
   useEffect(() => {
     setCategories(getCategoriesOptions());
   }, []);
 
   const getCategoriesOptions = () => {
-    let categories = [];
-    let uniqueCategories = [];
+    let categories =  [],
+        uniqueCategories = [];
 
     // Only add unique category names to the filter
     challengeData.map((data) => {
@@ -25,6 +25,19 @@ const Home = () => {
     });
 
     return categories;
+  };
+
+  const filterByCategory = ({ value }) => {
+    let filteredResults = [];
+
+    // Set list of results that match the selected filter option
+    challengeData.map((data) => {
+      if (data.category === value) {
+        filteredResults.push(data);
+      }
+    });
+
+    setResultsData(filteredResults);
   };
 
   return (
@@ -51,11 +64,12 @@ const Home = () => {
             classNamePrefix="react-select"
             options= { categories }
             placeholder="Any"
+            onChange={ e => filterByCategory(e) }
           />
         </div>
 
         <div className="results-content">
-          <Results results={ challengeData } />
+          <Results results={ resultsData } />
         </div>
 
       </div>
