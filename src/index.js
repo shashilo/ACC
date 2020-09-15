@@ -1,11 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Wrapper from './Components/Wrapperpper';
 import * as serviceWorker from './serviceWorker';
+import './shared/styles/main.scss';
+import { Routes } from './routes';
+import { Header } from './Components/Layout/Header';
+import { Footer } from './Components/Layout/Footer';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Wrapper />
+    <div className="container">
+      <Header />
+      <Routes />
+      <Footer />
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );

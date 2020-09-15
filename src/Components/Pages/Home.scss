@@ -1,0 +1,42 @@
+.home {
+    .hero {
+        display: grid;
+        grid-gap: 5rem;
+        grid-template-columns: auto 1fr;
+        font-size: 2rem;
+        letter-spacing: .03rem;
+        line-height: 2.8rem;
+        margin: auto;
+        max-width: 85rem;
+        padding: 3rem 0;
+
+        &::after {
+            background-color: var(--primaryColor);
+            content: '';
+            height: .4rem;
+            grid-column: span 2;
+            margin: auto;
+            width: 14rem;
+        }
+    }
+}
+
+.heading-image {
+    background-image: url('/images/heading-sprite.png');
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 14.5rem;
+    width: 14.5rem;
+
+    &.--analysis {
+        background-position-x: 0;
+    }
+
+    &.--planning {
+        background-position-x: -14.5rem;
+    }
+
+    &.--interview {
+        background-position-x: -29rem;
+    }
+}
