@@ -1,0 +1,22 @@
+:root {
+    // Branding was used from https://atlassian.design/foundations
+
+    // Primary colors
+    --pacificBridge: #0052CC;
+    --squidInk:      #172B4D;
+    --doctor:        #FFFFFF;
+    --mcFanning:     #42526E;
+
+    --primaryColor: var(--pacificBridge);
+    --secondaryColor: var(--squidInk);
+    --white: var(--white);
+    --contentColor: var(--mcFanning);
+    --headingColor: var(--squidInk);
+
+    // Secondary colors
+    --poppySuprise: #FF5630;
+    --goldenState:  #FFAB00;
+    --finePine:     #36B37E;
+    --tamarama:     #00B8D9;
+    --daJuice:      #6554C0;
+  }
