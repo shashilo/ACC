@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import './Home.scss';
-import challengeData from '../../data/coding_challenge_data.json';
-import Select from '@atlaskit/select';
-import { Results } from '../Results/Results';
+import challengeData from '../../../data/coding_challenge_data.json';
+import Select, { OptionsType } from '@atlaskit/select';
+import { Results } from '../../Results/Results';
+import { ResultsInterface, CategoryInterface } from './HomeInterface';
 
 const Home = () => {
-  const [ categories, setCategories ] = useState([]);
-  const [ resultsData, setResultsData ] = useState(challengeData);
+  const [ categories, setCategories ] = useState<OptionsType<CategoryInterface>>([]);
+  const [ resultsData, setResultsData ] = useState<ResultsInterface[]>(challengeData);
 
   useEffect(() => {
     setCategories(getCategoriesOptions());
   }, []);
 
   const getCategoriesOptions = () => {
-    let categories =  [],
-        uniqueCategories = [];
+    let categories: any[] = [],
+        uniqueCategories: Array<string> = [];
 
     // Only add unique category names to the filter
     challengeData.map((data) => {
@@ -27,12 +28,12 @@ const Home = () => {
     return categories;
   };
 
-  const filterByCategory = ({ value }) => {
-    let filteredResults = [];
+  const filterByCategory = (e: any) => {
+    let filteredResults: ResultsInterface[] = [];
 
     // Set list of results that match the selected filter option
     challengeData.map((data) => {
-      if (data.category === value) {
+      if (data.category === e.value) {
         filteredResults.push(data);
       }
     });
@@ -64,7 +65,7 @@ const Home = () => {
             classNamePrefix="react-select"
             options= { categories }
             placeholder="Any"
-            onChange={ e => filterByCategory(e) }
+            onChange={ filterByCategory }
           />
         </div>
 
