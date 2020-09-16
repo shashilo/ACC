@@ -1,4 +1,5 @@
 import { ChangeEvent } from "react";
+import { OptionsType } from "@atlaskit/select";
 
 export interface ResultsInterface {
     title: string,
@@ -6,6 +7,11 @@ export interface ResultsInterface {
     link: string,
     category: string,
     image: string
+}
+
+export interface ResultsFilterInterface {
+    onChange: any,
+    categories: any
 }
 
 export interface CategoryInterface extends ChangeEvent<HTMLInputElement> {

@@ -3,9 +3,9 @@ import './Home.scss';
 import challengeData from '../../../data/coding_challenge_data.json';
 import { OptionsType } from '@atlaskit/select';
 import { Results } from '../../Results/Results';
-import { ResultsInterface, CategoryInterface } from './HomeInterface';
+import { ResultsInterface, CategoryInterface } from '../../../shared/types/resultsInterface';
 import { Hero } from '../../Hero/Hero';
-import { ResultsFilter } from '../../Results/ResultsFilter';
+import { ResultsFilter } from '../../Results/ResultsFilter/ResultsFilter';
 
 const Home = () => {
   const [ categories, setCategories ] = useState<OptionsType<CategoryInterface>>([]);
@@ -30,12 +30,12 @@ const Home = () => {
     return categories;
   };
 
-  const filterByCategory = (e: any) => {
+  const filterByCategory = (event: any) => {
     let filteredResults: ResultsInterface[] = [];
 
     // Set list of results that match the selected filter option
     challengeData.forEach(data => {
-      if (data.category === e.value) {
+      if (data.category === event.value) {
         filteredResults.push(data);
       }
     });
