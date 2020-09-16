@@ -21,27 +21,46 @@ const results = [
     }
 ];
 
-test('renders Results component', () => {
-    const { getAllByTestId } = render(<Results results={ results } />);
-    const title = getAllByTestId('title');
-    const description = getAllByTestId('description');
-    const link = getAllByTestId('link');
-    const image = getAllByTestId('image');
+const renderResults = results => 
+    render(
+        <Results results={ results } />
+    );
 
-    title.forEach((nameNode, index) => {
-        expect(nameNode.textContent).toBe(results[index]['title'])
-    });
-
-    description.forEach((nameNode, index) => {
-        expect(nameNode.textContent).toBe(results[index]['description'])
-    });
-    
-    link.forEach((nameNode, index) => {
-        expect(nameNode.getAttribute("href")).toBe(results[index]['link'])
+describe('Results Tests', () => {
+    it('should render the title value', () => {
+        const { getAllByTestId } = renderResults(results);
+        const title = getAllByTestId('title');
+        
+        title.forEach((nameNode, index) => {
+            expect(nameNode.textContent).toBe(results[index]['title'])
+        });        
     });
 
-    image.forEach((nameNode, index) => {
-        expect(nameNode.getAttribute("src")).toBe(results[index]['image'])
+    it('should render the desription value', () => {
+        const { getAllByTestId } = renderResults(results);
+        const description = getAllByTestId('description');
+       
+
+        description.forEach((nameNode, index) => {
+            expect(nameNode.textContent).toBe(results[index]['description'])
+        });
     });
-    
+
+    it('should render the link value', () => {
+        const { getAllByTestId } = renderResults(results);
+        const link = getAllByTestId('link');
+        
+        link.forEach((nameNode, index) => {
+            expect(nameNode.getAttribute("href")).toBe(results[index]['link'])
+        });
+    });
+
+    it('should render the image value', () => {
+        const { getAllByTestId } = renderResults(results);
+        const image = getAllByTestId('image');
+
+        image.forEach((nameNode, index) => {
+            expect(nameNode.getAttribute("src")).toBe(results[index]['image'])
+        });
+    });
 });

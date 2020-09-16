@@ -1,11 +1,12 @@
 import React from 'react';
-import Select from '@atlaskit/select';
+import Select, { ValueType } from '@atlaskit/select';
 import './ResultsFilter.scss';
+import { ResultsFilterInterface } from '../../../shared/types/resultsInterface';
 
-export const ResultsFilter = (props: any) => {
+export const ResultsFilter = ({ onChange, categories }: any) => {
     
-    const filterByCategory = (event: any) => {
-        props.onChange(event);
+    const filterByCategory = (event: ValueType<String>) => {
+        onChange(event);
     }
     
     return (
@@ -14,12 +15,12 @@ export const ResultsFilter = (props: any) => {
             Filter Plays By:
             </div>
 
-            <div className="results__category" data-testid="category-filter">
+            <div className="results__category">
                 <label>Category</label>
                 <Select
                     className="single-select"
                     classNamePrefix="react-select"
-                    options= { props.categories }
+                    options= { categories }
                     placeholder="Any"
                     onChange={ filterByCategory }
                 />
