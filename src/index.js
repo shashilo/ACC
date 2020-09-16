@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
+import 'normalize.css';
 import './shared/styles/main.scss';
 import { Routes } from './routes';
 import { Header } from './Components/Layout/Header/Header';
