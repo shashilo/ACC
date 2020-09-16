@@ -1,7 +1,6 @@
 import React from 'react';
 import Select, { ValueType } from '@atlaskit/select';
 import './ResultsFilter.scss';
-import { ResultsFilterInterface } from '../../../shared/types/resultsInterface';
 
 export const ResultsFilter = ({ onChange, categories }: any) => {
     
